@@ -1,0 +1,128 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  color: #666;
+}
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.search__input {
+  padding-left: 5px;
+  width: 225px;
+  outline: none;
+  color: #666;
+}
+.btn {
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+}
+.nav__wraper {
+  padding-top: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -5px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+.nav {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.nav__item {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #666;
+  border-right: 1px solid #666;
+  padding: 5px 10px;
+  font-size: 11px;
+}
+.nav__item:last-child {
+  border: none;
+}
+.nav__item:hover {
+  color: #000;
+}
+.books__block {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+}
+.book {
+  padding-top: 30px;
+}
+.book img {
+  width: 200px;
+  height: 200px;
+}
+.book__title {
+  font-style: italic;
+  font-size: 12px;
+}
+
+/* max width 880 */
+@media (max-width: 880px) {
+  .books__block {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media (max-width: 700px) {
+  .books__block {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media (max-width: 494px) {
+  .books__block {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+  }
+  .header__logo {
+    width: 80%;
+    height: auto;
+  }
+  .search__input {
+    width: 200px;
+  }
+}
